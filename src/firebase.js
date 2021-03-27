@@ -11,16 +11,18 @@ firebase.initializeApp(config);
 
 let DB = firebase.database();
 
+//in: score(object)
 function pushScore(scores){
     DB.ref("allScore").once("value")
         .catch(console.error)
         .then(snapshot => {
+            console.log(scores);
             let allScore = [];
             if(snapshot.val()) allScore = snapshot.val();
+            console.log(allScore);
             allScore.push(scores);
             DB.ref("allScore").set(allScore)
                 .catch(console.error)
-                .then(console.log("uploaded score!"))
         })
 }
 
@@ -33,8 +35,8 @@ function getAllScore(){
 }
 
 let firebaseApp = {
-    pushScore: pushScore(scores),
-    getAllScore: getAllScore()
+    pushScore: pushScore,
+    getAllScore: getAllScore
 };
 
 export default firebaseApp;

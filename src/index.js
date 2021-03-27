@@ -3,16 +3,17 @@ import ReactDOM from 'react-dom';
 import App from './App';
 // import reportWebVitals from './reportWebVitals';
 
-// import firebaseApp from './firebase';
+import firebaseApp from './firebase';
 
-// let score = [
-//   {fuel: 10,
-//    home: 10,
-//    food: 10,
-//    waste: 10}
-// ]
+let score = {
+  fuel: 10,
+  home: 10,
+  food: 10,
+  waste: 10
+}
 
-// firebaseApp.DB.ref("allScore").set({score}).then(console.log("pushed!"));
+firebaseApp.pushScore(score);
+firebaseApp.getAllScore();
 
 ReactDOM.render(
   <React.StrictMode>
