@@ -1,19 +1,13 @@
-require("dotenv").config();
-var firebase = require('firebase');
-require('firebase/database');
+import firebase from 'firebase';
+require('dotenv').config()
 
-firebase.initializeApp({
-    apiKey: process.env.FIREBASE_API_KEY,
-    projectId: process.env.FIREBASE_PROJECT_ID,
-    databaseURL: process.env.FIREBASE_DATABASE_URL,
-});
-
-firebase.initializeApp({
-    apiKey: process.env.APIKEY,
-    projectId: process.env.PROJECTID,
-    databaseURL: process.env.DATABASEURL
-});
-
-module.exports = {
-    DB: firebase.database(),
+// Configure Firebase.
+const config = {
+    apiKey: process.env.REACT_APP_APIKEY,
+    projectId: process.env.REACT_APP_PROJECTID,
+    databaseURL: process.env.REACT_APP_DATABASEURL
 };
+firebase.initializeApp(config);
+let firebaseApp = {DB: firebase.database()};
+
+export default firebaseApp;

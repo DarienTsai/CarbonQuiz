@@ -1,0 +1,199 @@
+{
+    "start":[
+        {
+            "category": "Home",
+            "text": "You wake up in the morning in your...",
+            "radio": true,
+            "choices":[
+                {"text": "Mansion", "impact": 5},
+                {"text": "Apartment", "impact": 1},
+                {"text": "House", "impact": 3}
+            ],
+            "tip": "",
+            "ref": ""
+        }
+    ],
+    "morning":[
+        {
+            "category": "Food",
+            "text": "Today for breakfast, you...",
+            "radio": true,
+            "choices":[
+                {"text": "Have a granola bar or cereal", "impact": 3},
+                {"text": "Cook up an omelette", "impact": 3},
+                {"text": "Make a salad", "impact": 0},
+                {"text": "Grab a bite from your local bakery", "impact": 5},
+                {"text": "Get some quick breakfast at a nearby coffee shop", "impact": 5}
+            ],
+            "tip": "Driving to a local bakery or coffee shop is drastically less sustainable than making your own food, or having pre-made goods.",
+            "ref": ""
+        },
+        {
+            "category": "Home",
+            "text": "You start your day...",
+            "radio": true,
+            "choices":[
+                {"text": "With a light jog", "impact": 0},
+                {"text": "By watching the news", "impact": 2},
+                {"text": "Going through your mail", "impact": 0},
+                {"text": "With some morning coffee", "impact": 2},
+            ],
+            "tip": "",
+            "ref": ""
+        },
+        {
+            "category": "Fuel",
+            "text": "You mow your lawn this morning with a...",
+            "radio": true,
+            "choices":[
+                {"text": "Weed whacker", "impact": 3},
+                {"text": "Electric lawn mower", "impact": 4},
+                {"text": "Gas Powered Lawn Mower", "impact": 5},
+                {"text": "Shears", "impact": 1},
+                {"text": "Oh wait, you don’t have a lawn", "impact": 0}
+            ],
+            "tip": "Around 78% of greenhouse gases come from the production and consumption of energy, so try to limit your usage of fuel and power such as gas and electricity ",
+            "ref": "https://www.nrcan.gc.ca/science-data/data-analysis/energy-data-analysis/energy-facts/energy-and-greenhouse-gas-emissions-ghgs/20063"
+        },
+        {
+            "category": "Home",
+            "text": "After your regular morning routine, you remember that it's time to tend to your small garden. You do this every...",
+            "radio": true,
+            "choices":[
+                {"text": "Day", "impact": 5},
+                {"text": "Week", "impact": 3},
+                {"text": "Month", "impact": 1}
+            ],
+            "tip": "If you water your grass and trees more heavily, but less often, this saves water and builds stronger roots.",
+            "ref": "https://saniconenergysolutions.wordpress.com/2016/06/23/if-you-water-your-grass-and-trees-more-heavily-but-less-often-this-saves-water-and-builds-stronger-roots/ "
+        }
+    ],
+    "afternoon": [
+        {
+            "category": "Fuel",
+            "text": "It’s grocery day and you want to go shopping for some meat, vegetables, water, and snacks...",
+            "radio": true,
+            "choices":[
+                {"text": "I'll take the bus", "impact": 2},
+                {"text": "Gonna Bike", "impact": 0},
+                {"text": "Time for a drive", "impact": 5},
+                {"text": "I guess I’ll call a shared Uber", "impact": 3}
+            ],
+            "tip": "Generally, utilizing shared/public transportation reduces a cities’ carbon footprint as opposed to driving for yourself",
+            "ref": "https://blogs.gwu.edu/arcticpire/2017/06/26/the-importance-of-public-transportation-for-sustainability-in-arctic-cities/#:~:text=Public%20transportation%20is%20an%20important%20contributing%20factor%20to,easing%20commute%20and%20transportation%20needs%20and%20increasing%20accessibility."
+        }, 
+        {
+            "category": "Food",
+            "text": "You arrive at the store and get your weekly groceries. As you line up for checkout, you check out today’s haul of...",
+            "radio": true,
+            "choices":[
+                {"text": "Meats", "impact": 3},
+                {"text": "Fruits and Veggies", "impact": 1},
+                {"text": "Frozen meal sets", "impact": 5},
+                {"text": "Water", "impact": 1},
+                {"text": "Snacks and Beverages", "impact": 4}
+            ],
+            "tip": "Food production accounts for over a quarter of the world’s greenhouse gas emissions. Try to encourage the purchase of organic goods.",
+            "ref": "https://ourworldindata.org/environmental-impacts-of-food"
+        }, 
+        {
+            "category": "Food",
+            "text": "You decided you want to go camping for fun. For food, do you either...",
+            "radio": true,
+            "choices":[
+                {"text": "Starve", "impact": 0},
+                {"text": "Buy fast food and chill", "impact": 5},
+                {"text": "Go hunting and foraging", "impact": 0}
+            ],
+            "tip": "The fast food industry is one of the largest contributors to global climate change ",
+            "ref": "https://www.bbc.com/news/science-environment-47029485"
+        }
+    ],
+    "evening": [
+        {
+            "category": "Waste",
+            "text": "When you get back home from the movies, you realize that you have a giant food stain on your brand new Unisex Hanes Relaxed Fit Authentic Crewneck T-Shirt. You need to remove this stain ASAP...",
+            "radio": true,
+            "choices":[
+                {"text": "Wash the stain using the washing machine", "impact": 4},
+                {"text": "Hand wash it", "impact": 2},
+                {"text": "Don't wash it", "impact": 0}
+            ],
+            "tip": "",
+            "ref": ""
+        }, 
+        {
+            "category": "Home",
+            "text": "It’s the end of the day and you want to bathe. You...",
+            "radio": true,
+            "choices":[
+                {"text": "Decide to skip hygiene for the day", "impact": 0},
+                {"text": "Take a shower", "impact": 3},
+                {"text": "Chill in the bathtub", "impact": 5},
+                {"text": "Scrub your body with a wet cloth", "impact": 1}
+            ],
+            "tip": "Showering and bathing are the largest indoor uses (27%) of water domestically. Taking a shower usually saves more water than using a bathtub, and cutting shower times by a few minutes will save gallons of water.",
+            "ref": "https://www.thinkh2onow.com/water_conservation_facts.php#:~:text=Showering%20and%20bathing%20are%20the,a%20cubic%20foot%20of%20water"
+        }, 
+        {
+            "category": "Fuel",
+            "text": "You and your closest friend receive invites from Zach Synder himself to watch his exclusive cut of The Justice League. On the day of, both of you...",
+            "radio": true,
+            "choices":[
+                {"text": "Wait for Zach to pick you up", "impact": 4},
+                {"text": "Call an Uber", "impact": 3},
+                {"text": "Ghost Zach", "impact": 0},
+                {"text": "Bike to the theater", "impact": 0},
+                {"text": "Take the bus", "impact": 2},
+                {"text": "Drive to the theater yourself", "impact": 5}
+            ],
+            "tip": "Carpooling and taking advantage of public transit has a multitude of benefits, one of which includes the reduction of carbon emissions within the atmosphere.",
+            "ref": "https://ncst.ucdavis.edu/project/evaluating-sustainability-impacts-intelligent-carpooling-system-among-single-occupancy#:~:text=For%20evaluating%20systemic%20sustainability%20of%20the%20carpool%20system%2C,or%20otherwise%2C%20thus%20creating%20a%20%E2%80%9Cpop-up%20carpool%20demand%E2%80%9D%29."
+        }, 
+        {
+            "category": "Food",
+            "text": "You've reached the theater with your friend and you hear your friend's stomach rubble, which causes your stomach to rubble. You need food. What would be your go-to meal at the movies?",
+            "radio": true,
+            "choices":[
+                {"text": "Gourmet Nathan's Hot Dog with Premium Bun", "impact": 4},
+                {"text": "Fresh Cut Non-Vegan Gourmet Salad", "impact": 2},
+                {"text": "A Fresh Cut Vegan Gourmet Salad", "impact": 1},
+                {"text": "Gourmet Popcorn with Melted Gourmet Butter", "impact": 3},
+                {"text": "Nostalgic 2 for 1 Lunchables (the ones you had as a kid)", "impact": 3},
+                {"text": "Gourmet Pre-Packaged Pepperoni Pizza Warmed at 425 degrees", "impact": 5},
+                {"text": "Gourmet Vegan Churro", "impact": 2}
+            ],
+            "tip": "Diets that include meat have a 41.5% larger environmental footprint as compared to vegetarian and/or vegan diets, as published in a study by ADEME.",
+            "ref": "https://www.downtoearth.org/articles/2018-04/12051/new-study-confirms-veggie-diets-are-more-sustainable-non-veggie-diets"
+        }, 
+        {
+            "category": "Food",
+            "text": "You are having dinner with friends tonight and look forward to having a good time. You all agreed on...",
+            "radio": true,
+            "choices":[
+                {"text": "Your group’s favorite fast food joint", "impact": 5},
+                {"text": "A meal from one of your friends at their place", "impact": 2},
+                {"text": "A potluck at your place", "impact": 1},
+                {"text": "A restaurant", "impact": 4}
+            ],
+            "tip": "A typical restaurant meal's CO2e emissions is over 3 times the CO2e emissions of a meal made at home. Also, preparing or sharing food at home is usually cheaper.",
+            "ref": "https://greenrisks.blogspot.com/2013/02/reduce-your-carbon-footprint-eat-at-home.html "
+        }
+    ],
+    "end": [
+        {
+            "category": "Home",
+            "text": "The sun has set. You decide to sleep at...",
+            "radio": true,
+            "choices":[
+                {"text": "10PM", "impact": 1},
+                {"text": "12AM", "impact": 2},
+                {"text": "3AM", "impact": 3},
+                {"text": "6AM", "impact": 4},
+                {"text": "You don't sleep", "impact": 5}
+            ],
+            "tip": "Staying up late with lights on adds to CO2 emissions. Going to bed earlier will help reduce emissions and earn savings on your electricity bill - on average, lighting accounts for 25-30% of a monthly electricity bill.",
+            "ref": "https://www.renaissancepowerandgas.com/blog/about-deregulation/how-your-lights-affect-your-electric-bill/#:~:text=Light%20bulbs%20and%20fixtures%20can,that%20the%20light%20stays%20on. "
+        }
+    ]
+}
