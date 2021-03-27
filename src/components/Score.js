@@ -5,7 +5,7 @@ export default function Score() {
   return (
     <div className='score-main-container'>
       <div className='score-statistics'>
-        <div className='gen-score-title'>
+        <div id='main-title' className='gen-score-title'>
           Your Overall Score:
         </div>
         <div className='score-body'>

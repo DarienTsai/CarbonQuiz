@@ -7,6 +7,12 @@
   @include gen-title-text;
 }
 
+#main-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .score-main-container {
   display: flex;
   flex-direction: column;
