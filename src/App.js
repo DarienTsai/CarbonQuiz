@@ -1,3 +1,4 @@
+/* global data */
 import './App.css';
 import Question from './components/Question';
 
@@ -5,7 +6,7 @@ import Question from './components/Question';
 function App() {
   return (
     <div className="App">
-      {<Question/>}
+      {<Question data={data.story[0]}/>}
     </div>
   );
 }
