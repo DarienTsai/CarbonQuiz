@@ -36,7 +36,7 @@
                 {"text": "With a light jog", "impact": 0},
                 {"text": "By watching the news", "impact": 2},
                 {"text": "Going through your mail", "impact": 0},
-                {"text": "With some morning coffee", "impact": 2},
+                {"text": "With some morning coffee", "impact": 2}
             ],
             "tip": "",
             "ref": ""
@@ -195,5 +195,26 @@
             "tip": "Staying up late with lights on adds to CO2 emissions. Going to bed earlier will help reduce emissions and earn savings on your electricity bill - on average, lighting accounts for 25-30% of a monthly electricity bill.",
             "ref": "https://www.renaissancepowerandgas.com/blog/about-deregulation/how-your-lights-affect-your-electric-bill/#:~:text=Light%20bulbs%20and%20fixtures%20can,that%20the%20light%20stays%20on. "
         }
-    ]
+    ],
+    "story": [
+        {
+            "category": "Home",
+            "text": "You wake up in the morning in your...",
+            "radio": false,
+            "choices":[
+                {"text": "Mansion", "impact": 5},
+                {"text": "Apartment", "impact": 1},
+                {"text": "House", "impact": 3}
+            ],
+            "tip": "",
+            "ref": ""
+        }
+    ],
+    "score": {
+        "Fuel": {"sum": 0, "total":0},
+        "Home": {"sum": 0, "total":0},
+        "Food": {"sum": 0, "total":0},
+        "Waste": {"sum": 0, "total":0},
+        "tips": []
+    }
 }
