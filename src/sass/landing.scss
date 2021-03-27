@@ -1,0 +1,42 @@
+.landing-container {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  display: block;
+}
+
+.play-button {
+  font-size: 2.5rem;
+  width: 10vw;
+  &:hover {
+    background-color: rgb(228, 228, 228);
+    cursor: pointer;
+  }
+}
+
+.main-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.p {
+  margin: 2.5vh 0;
+  max-width: 45ch;
+  text-align: center;
+  cursor: default;
+}
+
+.footer {
+  height: 3rem;
+  font-size: 1.3rem;
+  position: absolute;
+  left: 40vw;
+  bottom: 1vh;
+}
