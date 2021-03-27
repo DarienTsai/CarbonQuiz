@@ -1,11 +1,143 @@
+.landing-container {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  display: block;
+}
+
+.play-button {
+  font-size: 2.5rem;
+  width: 10vw;
+}
+.play-button:hover {
+  background-color: #e4e4e4;
+  cursor: pointer;
+}
+
+.main-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.p {
+  margin: 2.5vh 0;
+  max-width: 45ch;
+  text-align: center;
+  cursor: default;
+}
+
+.footer {
+  height: 3rem;
+  font-size: 1.3rem;
+  position: absolute;
+  left: 40vw;
+  bottom: 1vh;
+}
+
+.x-spacing {
+  margin: 0 10px;
+}
+
+.main-div {
+  width: 40vw;
+}
+
+.bottom-spacing {
+  margin-bottom: 10px;
+}
+
+.metric-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.main-metric-text {
+  font-size: 1.3rem;
+}
+
+.metric-bar {
+  height: 1.6vh;
+  background-color: grey;
+  border-radius: 50px;
+}
+
+.gen-score-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.score-main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4vh;
+}
+
+.score-statistics {
+  margin-bottom: 10vh;
+}
+
+.score-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+}
+
+.score-space {
+  margin: 5px 0;
+}
+
+.main-score {
+  font-size: 4rem;
+}
+
+.percent-score {
+  font-size: 1.2rem;
+}
+
+.para-score {
+  font-size: 1.2rem;
+}
+
+.disclosure-text {
+  font-size: 1.3rem;
+}
+
+.tips-container {
+  max-width: 49vw;
+  margin-top: 6vh;
+}
+
+.tip-text {
+  font-size: 1.3rem;
+  margin: 20px 0;
+}
+
 * {
   margin: 0;
   padding: 0;
+  outline: yellow solid 1px;
 }
 
 body #root {
   width: 100vw;
   height: 100vh;
+}
+
+.main-text {
+  font-size: 1.8rem;
 }
 
 /*# sourceMappingURL=App.css.map */

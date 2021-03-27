@@ -1,9 +1,18 @@
+@import './landing.scss';
+@import './scoremetric.scss';
+@import './score.scss';
+
 *{
   margin: 0;
   padding: 0;
+  outline: yellow solid 1px;
 }
 
 body #root{
   width: 100vw;
   height: 100vh;
+}
+
+.main-text {
+  font-size: 1.8rem;
 }
