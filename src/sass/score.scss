@@ -1,0 +1,58 @@
+@mixin gen-title-text {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.gen-score-title {
+  @include gen-title-text;
+}
+
+.score-main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4vh;
+}
+
+.score-statistics {
+  margin-bottom: 10vh;
+}
+
+.score-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+}
+
+.score-space {
+  margin: 5px 0;
+}
+
+.main-score {
+  font-size: 4rem;
+}
+
+.percent-score {
+  font-size: 1.2rem;
+}
+
+.para-score {
+  font-size: 1.2rem;
+}
+
+.disclosure-text {
+  font-size: 1.3rem;
+}
+
+.tips-container {
+  max-width: 49vw;
+  margin-top: 6vh;
+}
+
+.tip-text {
+  font-size: 1.3rem;
+  margin: 20px 0;
+}
