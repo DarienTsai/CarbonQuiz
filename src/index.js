@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import App from './App';
 // import reportWebVitals from './reportWebVitals';
 
+// State
+global.data = require("./data.json");
+
 // import firebaseApp from './firebase';
 
 // let score = [

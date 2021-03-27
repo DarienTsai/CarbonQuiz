@@ -1,48 +1,80 @@
-// Display a quiz event
-import React from 'react';
+/* global data */
 
-import Radio from '@material-ui/core/Radio';
-import RadioGroup from '@material-ui/core/RadioGroup';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormControl from '@material-ui/core/FormControl';
+// Display a quiz event
+import {useState} from 'react';
+import RadioQ from './RadioQ';
+import CheckQ from './CheckQ';
+
+import Button from '@material-ui/core/Button';
 
 export default function Question(props) {
 
-  // Hook for question selection
-  let init;
-  if (props.radio){
-    init = 0;
-  } else{
-    init = {};
-    for( let i = 0; i < props.choices.length; i++){
-      init[i] = false;
-    }
-  }
+  // create initial q state
+  let init = props.data.radio ? "0" : {};
 
-  const [value, setValue] = React.useState(0);
+  // Store responses
+  const [res, setRes] = useState(init);
 
-  // Store user selection 
+  // Handle response
   const handleChange = (event) => {
-    setValue(event.target.value);
+    if(props.data.radio){
+      setRes(event.target.value);
+    } else{
+      setRes({ ...res, [event.target.name]: event.target.checked });
+    }
   };
 
-  // Map choices to their idx, used to access score on q submit
-  let idx = 0;
+  // Question submission
+  const handleNext = () => {
 
+    // console.log("start", data.score);
+
+    // Add choice impact to sum
+    if(props.data.radio){
+
+      // Add max question impact to total
+      let max = 0;
+      for(let i = 0; i < props.data.choices.length; i++){
+         max = Math.max(props.data.choices[i].impact, max);
+      }
+      data.score[props.data.category].total += max;
+
+      data.score[props.data.category].sum += props.data.choices[res].impact;
+    } else{
+
+      // Add all question impacts to total
+      for(let i = 0; i < props.data.choices.length; i++){
+        data.score[props.data.category].total += props.data.choices[i].impact;
+      }
+
+      for(let key in res){
+        if (res[key]){
+          for(let i = 0; i < props.data.choices.length; i++){
+
+            if( props.data.choices[i].text == key ){
+              data.score[props.data.category].sum += props.data.choices[i].impact;
+            }
+          }
+        }
+      }
+    }
+    // console.log("end", data.score);
+
+
+    // Transition to next Q here
+
+  }
+
+  // Map choices to their idx, used to access score on q submit
   return (
     <div id="question">
       {/* icon */}
-      <p className="question-text">{/* text */}</p>
+      <p className="question-text">{props.data.text}</p>
 
-      <FormControl component="fieldset">
-        <RadioGroup aria-label="carbon-q" name="carbon-q" value={value} onChange={handleChange}>
+      {props.data.radio ? <RadioQ val={res} handle={handleChange} data={props.data}/>:<CheckQ val={res} handle={handleChange} data={props.data}/>}
 
-          {/*props.map( x => {return <FormControlLabel value={idx++} control={<Radio />} label={x.text} />;})*/}
-
-        </RadioGroup>
-      </FormControl>
+      <Button onClick={handleNext} variant="contained" color="primary">{">>"}</Button>
       
     </div>
-  );
-  
+  )
 }
