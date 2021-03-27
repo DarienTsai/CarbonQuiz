@@ -5,7 +5,7 @@ import Question from './components/Question';
 function App() {
   return (
     <div className="App">
-      {/*<Question/>*/}
+      {<Question/>}
     </div>
   );
 }
