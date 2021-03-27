@@ -1,0 +1,28 @@
+.x-spacing {
+  margin: 0 10px;
+}
+
+.main-div {
+  width: 40vw;
+}
+
+.bottom-spacing {
+  margin-bottom: 10px;
+}
+
+.metric-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.main-metric-text {
+  font-size: 1.3rem;
+}
+
+.metric-bar {
+  height: 1.6vh;
+  background-color: grey;
+  border-radius: 50px;
+}

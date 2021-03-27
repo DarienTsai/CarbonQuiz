@@ -6,6 +6,17 @@ import App from './App';
 // State
 global.data = require("./data.json");
 
+// import firebaseApp from './firebase';
+
+// let score = [
+//   {fuel: 10,
+//    home: 10,
+//    food: 10,
+//    waste: 10}
+// ]
+
+// firebaseApp.DB.ref("allScore").set({score}).then(console.log("pushed!"));
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

@@ -27,7 +27,7 @@ export default function Question(props) {
   // Question submission
   const handleNext = () => {
 
-    console.log("start", data.score);
+    // console.log("start", data.score);
 
     // Add choice impact to sum
     if(props.data.radio){
@@ -58,7 +58,7 @@ export default function Question(props) {
         }
       }
     }
-    console.log("end", data.score);
+    // console.log("end", data.score);
 
 
     // Transition to next Q here
