@@ -31,6 +31,7 @@ export default function Landing(props) {
     // DAYS
     addDay();
     addDay();
+    data.story.push(data.end[0]);
 
     console.log(data.story)
     

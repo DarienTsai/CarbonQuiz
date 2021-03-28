@@ -3,6 +3,13 @@
 @import './score.scss';
 @import './question.scss';
 
+@keyframes anim{
+  to{
+    transform: none;
+    opacity: 1;
+  }
+}
+
 *{
   margin: 0;
   padding: 0;
