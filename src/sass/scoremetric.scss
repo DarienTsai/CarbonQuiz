@@ -19,10 +19,16 @@
 
 .main-metric-text {
   font-size: 1.3rem;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: anim 1s 1 cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
 .metric-bar {
   height: 1.6vh;
   background-color: grey;
   border-radius: 50px;
+  transform-origin: left;
+  transform: scaleX(0);
+  animation: anim 1s .2s 1 cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
 }
