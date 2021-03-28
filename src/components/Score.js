@@ -3,8 +3,6 @@ import React from 'react';
 import ScoreMetric from './ScoreMetric';
 import firebaseApp from '../firebase';
 
-console.log(firebaseApp);
-
 export default function Score(props) { 
 
   console.log(data);

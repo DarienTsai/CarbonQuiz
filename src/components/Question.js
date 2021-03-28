@@ -59,7 +59,7 @@ export default function Question(props) {
       data.score[props.data.category].total += max;
 
       data.score[props.data.category].sum += props.data.choices[res].impact;
-      if(props.data.choices[res].impact > 3 && props.data.tip != ''){
+      if(props.data.choices[res].impact > 3 && props.data.tip !== ''){
         data.score.tips.push(props.data.tip);
       }
     } else{
@@ -82,7 +82,7 @@ export default function Question(props) {
       }
       data.score[props.data.category].sum += sum;
 
-      if(sum > 3 && props.data.tip != ''){
+      if(sum > 3 && props.data.tip !== ''){
         data.score.tips.push(props.data.tip);
       }
     }
