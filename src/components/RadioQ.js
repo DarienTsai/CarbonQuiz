@@ -12,8 +12,22 @@ export default function RadioQ(props){
 
   return(
     <FormControl component="fieldset">
-      <RadioGroup aria-label="carbon-q" name="carbon-q" value={props.val} onChange={props.handle}>
-        {props.data.choices.map( x => {return <FormControlLabel key={key++} value={(idx++).toString()} control={<Radio/>} label={x.text} />;})}
+      <RadioGroup 
+        aria-label="carbon-q" 
+        name="carbon-q" 
+        value={props.val} 
+        onChange={props.handle}
+      >
+        {
+          props.data.choices.map(x => ( 
+            <FormControlLabel 
+              key={key++} 
+              value={(idx++).toString()} 
+              control={<Radio/>} 
+              label={x.text} 
+            />
+          ))
+        }
       </RadioGroup>
     </FormControl>
   );

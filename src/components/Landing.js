@@ -1,11 +1,48 @@
+/* global data */
 import React from 'react';
+import logo from '../assets/logo.png';
 
-export default function Landing() {
+export default function Landing(props) {
+
+  const {
+    setPage,
+  } = props;
+
+  const handlePlay = () => {
+    // morning events: 2
+    let morningCopy = [...data.morning]; // deep-copies
+    let afternoonCopy = [...data.afternoon];
+    let eveningCopy = [...data.evening];
+
+    const addDay = () => {
+      let morningEvent1 = Math.floor(Math.random() * morningCopy.length);
+      data.story.push(morningCopy[morningEvent1]);
+      morningCopy.splice(morningEvent1, 1);
+      
+      let afternoonEvent1 = Math.floor(Math.random() * afternoonCopy.length);
+      data.story.push(afternoonCopy[afternoonEvent1]);
+      afternoonCopy.splice(afternoonEvent1, 1);
+  
+      let eveningEvent1 = Math.floor(Math.random() * eveningCopy.length);
+      data.story.push(eveningCopy[eveningEvent1]);
+      eveningCopy.splice(eveningEvent1, 1);
+    }
+
+    // DAYS
+    addDay();
+    addDay();
+
+    console.log(data.story)
+    
+    data.nav = 1;
+    setPage(1);
+  }
+
   return (
     <div className='landing-container'>
-      <img className='logo' alt='logo' width={200} height={200} src='https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fsweetclipart.com%2Fmultisite%2Fsweetclipart%2Ffiles%2Fff0000%2520Color%2520Square%2520RGB%2520Red.png&f=1&nofb=1' />
+      <img className='logo' alt='logo' width={200} height={200} src={logo} />
       <div className='main-body'>
-        <p className='p play-button'>
+        <p onClick={handlePlay} className='p play-button'>
           Play
         </p>
         <p className='main-text p'>

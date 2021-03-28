@@ -15,11 +15,15 @@ export default function CheckQ(props) {
     <div>
       <FormControl component="fieldset">
         <FormGroup>
-          {props.data.choices.map(x => {return <FormControlLabel key={key--}
-            control={<Checkbox onChange={props.handle} name={x.text} />}
-            label={x.text}
-            />
-          })}
+          {
+            props.data.choices.map(x => (
+              <FormControlLabel 
+                key={key--} 
+                control={<Checkbox onChange={props.handle} name={x.text} />}
+                label={x.text}
+              />
+            ))
+          }
         </FormGroup>
       </FormControl>
       

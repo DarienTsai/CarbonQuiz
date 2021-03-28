@@ -24,7 +24,8 @@
     "dev": "concurrently \"npm start\" \"sass --watch src/sass/compile.scss src/App.css\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "bash deploy.sh"
   },
   "eslintConfig": {
     "extends": [

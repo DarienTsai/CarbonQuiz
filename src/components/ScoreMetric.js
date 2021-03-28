@@ -23,14 +23,14 @@ export default function ScoreMetric(props) {
           }}
         />
         <div>
-          - Better than 15% of other results
+          - Better than [NEED FIREBASE] of other results
         </div>
       </div>
       <p className='x-spacing main-metric-text'>
-        {score} / {maxPoints}
+        {score}/{maxPoints}
       </p>
       <p className='x-spacing main-metric-text'>
-        {progress}%
+        {Math.round(progress)}%
       </p>
     </div>
   )
