@@ -5,6 +5,13 @@
   }
 }
 
+@keyframes anim2{
+  to{
+    transform: none;
+    opacity: 0.75;
+  }
+}
+
 *{
   margin: 0;
   padding: 0;

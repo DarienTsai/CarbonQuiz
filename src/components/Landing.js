@@ -61,9 +61,6 @@ export default function Landing(props) {
           be different each time!
         </p>
       </div>
-      <footer className='footer'>
-        Submitted as a project for Hoohacks 2021
-      </footer>
     </div>
   );
 }

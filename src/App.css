@@ -4,6 +4,12 @@
     opacity: 1;
   }
 }
+@keyframes anim2 {
+  to {
+    transform: none;
+    opacity: 0.75;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -158,11 +164,22 @@ body #root {
 }
 
 #question {
-  display: inline-block;
-  background-color: rgba(40, 40, 40, 0.8);
   position: absolute;
-  bottom: 3vh;
-  z-index: 3;
+  bottom: 10vh;
+  left: 5vw;
+  box-sizing: border-box;
+  padding: 2%;
+  padding-bottom: 4%;
+  width: 90vw;
+  background-color: #1f1f1f;
+  opacity: 0;
+  transform: translateY(50px);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  color: white;
+  text-align: center;
+  padding-top: 1.5em;
+  animation: anim2 1s 0.2s 1 cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
 }
 
 .outer-question-container {
@@ -175,11 +192,22 @@ body #root {
 }
 
 .question-text {
+  padding-top: 1.5em;
+  border-top: solid white 2px;
+  text-align: center;
+  width: 60%;
+  position: relative;
+  left: 20%;
   font-size: 1.1rem;
+  font-family: Roboto;
+  margin-bottom: 2rem;
 }
 
-.next-button {
-  max-width: 4rem;
+button.MuiButton-containedPrimary {
+  position: absolute;
+  bottom: 4%;
+  display: block;
+  margin-left: 45%;
 }
 
 /*# sourceMappingURL=App.css.map */
