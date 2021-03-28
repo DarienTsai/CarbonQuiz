@@ -59,7 +59,8 @@ function getAvg(){
 
 let firebaseApp = {
     pushScore: pushScore,
-    getAllScore: getAllScore
+    getAllScore: getAllScore,
+    getAvg: getAvg
 };
 
 export default firebaseApp;
