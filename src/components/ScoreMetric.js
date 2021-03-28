@@ -10,7 +10,7 @@ export default function ScoreMetric(props) {
   } = props;
 
   const progress = 100 - (percent * 100);
-  const betterVal = progress - (average * 100);
+  const betterVal = Math.round(progress - (average * 100));
 
   return (
     <div className='metric-container'>

@@ -95,7 +95,7 @@ body #root {
 
 .metric-bar {
   height: 1.6vh;
-  background-color: grey;
+  background-color: #7bd85f;
   border-radius: 50px;
   transform-origin: left;
   transform: scaleX(0);

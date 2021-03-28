@@ -8,22 +8,34 @@ export default function Score(props) {
 
   useEffect(async () => {
     await printAvg();
+    const fuelPayload = data.score.Fuel.total === 0 ? 
+      0.5 : data.score.Fuel.sum / data.score.Fuel.total;
+    const homePayload = data.score.Home.total === 0 ? 
+      0.5 : data.score.Home.sum / data.score.Home.total;
+    const foodPayload = data.score.Food.total === 0 ? 
+      0.5 : data.score.Food.sum / data.score.Food.total;
+    const wastePayload = data.score.Waste.total === 0 ? 
+      0.5 : data.score.Waste.sum / data.score.Waste.total;
+    const payload = {
+      fuel: fuelPayload,
+      home: homePayload,
+      food: foodPayload,
+      waste: wastePayload,
+    };
+    firebaseApp.pushScore(payload)
   }, []);
 
   const printAvg = async () => {
     const call = await firebaseApp.getAvg();
-    console.log(call);
     setCall(call);
   }
-
-  console.log(data);
 
   const aggregateSum = data.score.Fuel.sum + data.score.Home.sum + 
     data.score.Food.sum + data.score.Waste.sum;
   const aggregateTotal = data.score.Fuel.total + data.score.Home.total +
     data.score.Food.total + data.score.Waste.total;
   const percentage = (100 - (100 * (aggregateSum/aggregateTotal))).toFixed(2);
-  const betterVal = percentage - (avgCall.total * 100);
+  const betterVal = Math.round(percentage - (avgCall.total * 100));
 
   return (
     <div className='score-main-container'>
