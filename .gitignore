@@ -13,6 +13,7 @@
 # production
 /build
 deploy.sh
+/.netlify
 
 # misc
 .DS_Store

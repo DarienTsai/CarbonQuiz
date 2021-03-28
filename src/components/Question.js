@@ -87,7 +87,6 @@ export default function Question(props) {
     if (props.question + 1 < data.story.length) {
       props.setQuestion(props.question + 1);
       setRefresh(prev => !prev);
-      console.log('wtf');
     } else {
       data.nav = 2;
       props.setPage(2);
