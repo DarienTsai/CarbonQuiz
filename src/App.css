@@ -132,7 +132,23 @@
 }
 
 #question {
-  background-color: #87f587;
+  display: inline-block;
+  background-color: rgba(40, 40, 40, 0.8);
+  z-index: 3;
+}
+
+.outer-question-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.question-text {
+  font-size: 1.1rem;
+}
+
+.next-button {
+  max-width: 4rem;
 }
 
 * {

@@ -1,8 +1,15 @@
+/* global data */
 import React from 'react';
 import ScoreMetric from './ScoreMetric';
 
 export default function Score(props) { 
 
+  console.log(data);
+
+  const aggregateSum = data.score.Fuel.sum + data.score.Home.sum + 
+    data.score.Food.sum + data.score.Waste.sum;
+  const aggregateTotal = data.score.Fuel.total + data.score.Home.total +
+    data.score.Food.total + data.score.Waste.total;
 
   return (
     <div className='score-main-container'>
@@ -12,13 +19,13 @@ export default function Score(props) {
         </div>
         <div className='score-body'>
           <p className='score-space main-score'>
-            69/96
+            {aggregateSum}/{aggregateTotal}
           </p>
           <p className='score-space percent-score'>
-            (71.88%)
+            [NEED FIREBASE]
           </p>
           <p className='score-space para-score'>
-            That's better than 42.0% of other results!
+            That's better than [NEED FIREBASE] of other results!
           </p>
         </div>
       </div>
@@ -26,26 +33,38 @@ export default function Score(props) {
         <p className='gen-score-title'>
           Reduction of Carbon Footprint
         </p>
-        <ScoreMetric 
-          category='Fuel'
-          score={5}
-          maxPoints={10}
-        />
-        <ScoreMetric 
-          category='Home'
-          score={12}
-          maxPoints={15}
-        />
-        <ScoreMetric 
-          category='Food'
-          score={19}
-          maxPoints={20}
-        />
-        <ScoreMetric 
-          category='Waste'
-          score={3}
-          maxPoints={5}
-        />
+        {
+          data.score.Fuel.total != 0 &&
+          <ScoreMetric 
+            category='Fuel'
+            score={data.score.Fuel.sum}
+            maxPoints={data.score.Fuel.total}
+          />
+        }
+        {
+          data.score.Home.total != 0 &&
+          <ScoreMetric 
+            category='Home'
+            score={data.score.Home.sum}
+            maxPoints={data.score.Home.total}
+          />
+        }
+        {
+          data.score.Food.total != 0 &&
+          <ScoreMetric 
+            category='Food'
+            score={data.score.Food.sum}
+            maxPoints={data.score.Food.total}
+          />
+        }
+        {
+          data.score.Waste.total != 0 &&
+          <ScoreMetric 
+            category='Waste'
+            score={data.score.Waste.sum}
+            maxPoints={data.score.Waste.total}
+          />
+        }
       </div>
       <p className='disclosure-text'>
         *Your score may differ based on the events in your day
