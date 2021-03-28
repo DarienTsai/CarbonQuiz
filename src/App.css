@@ -1,3 +1,23 @@
+@keyframes anim {
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body #root {
+  width: 100vw;
+  height: 100vh;
+}
+
+.main-text {
+  font-size: 1.8rem;
+}
+
 .landing-container {
   display: flex;
   height: 100vh;
@@ -62,12 +82,18 @@
 
 .main-metric-text {
   font-size: 1.3rem;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: anim 1s 1 cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
 .metric-bar {
   height: 1.6vh;
   background-color: grey;
   border-radius: 50px;
+  transform-origin: left;
+  transform: scaleX(0);
+  animation: anim 1s 0.2s 1 cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
 }
 
 .gen-score-title {
@@ -154,26 +180,6 @@
 
 .next-button {
   max-width: 4rem;
-}
-
-@keyframes anim {
-  to {
-    transform: none;
-    opacity: 1;
-  }
-}
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body #root {
-  width: 100vw;
-  height: 100vh;
-}
-
-.main-text {
-  font-size: 1.8rem;
 }
 
 /*# sourceMappingURL=App.css.map */
