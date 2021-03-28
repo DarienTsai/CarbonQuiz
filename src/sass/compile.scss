@@ -1,7 +1,9 @@
-@import './landing.scss';
-@import './scoremetric.scss';
-@import './score.scss';
-@import './question.scss';
+@keyframes anim{
+  to{
+    transform: none;
+    opacity: 1;
+  }
+}
 
 *{
   margin: 0;
@@ -17,3 +19,8 @@ body #root{
 .main-text {
   font-size: 1.8rem;
 }
+
+@import './landing.scss';
+@import './scoremetric.scss';
+@import './score.scss';
+@import './question.scss';

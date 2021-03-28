@@ -19,10 +19,10 @@ export default function Score(props) {
         </div>
         <div className='score-body'>
           <p className='score-space main-score'>
-            {aggregateSum}/{aggregateTotal}
+            {aggregateTotal - aggregateSum}/{aggregateTotal}
           </p>
           <p className='score-space percent-score'>
-            [NEED FIREBASE]
+            {(100 - (100 * (aggregateSum/aggregateTotal))).toFixed(2)}%
           </p>
           <p className='score-space para-score'>
             That's better than [NEED FIREBASE] of other results!
@@ -73,12 +73,7 @@ export default function Score(props) {
         <p className='gen-score-title'>
           Sustainability Tips:
         </p>
-        <p className='tip-text'>
-          - Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-          Ratione accusamus eligendi error culpa quas vitae, quaerat 
-          deserunt, nulla, aperiam sint libero! Voluptate consequuntur 
-          aliquam quasi?
-        </p>
+        {data.score.tips.map(x => {return <p className='tip-text'>{'- ' + x}</p>})}
       </div>
     </div>
   )

@@ -59,6 +59,9 @@ export default function Question(props) {
       data.score[props.data.category].total += max;
 
       data.score[props.data.category].sum += props.data.choices[res].impact;
+      if(props.data.choices[res].impact > 3 && props.data.tip != ''){
+        data.score.tips.push(props.data.tip);
+      }
     } else{
 
       // Add all question impacts to total
@@ -66,15 +69,21 @@ export default function Question(props) {
         data.score[props.data.category].total += props.data.choices[i].impact;
       }
 
+      let sum = 0;
       for(let key in res){
         if (res[key]){
           for(let i = 0; i < props.data.choices.length; i++){
 
             if( props.data.choices[i].text === key ){
-              data.score[props.data.category].sum += props.data.choices[i].impact;
+              sum += props.data.choices[i].impact;
             }
           }
         }
+      }
+      data.score[props.data.category].sum += sum;
+
+      if(sum > 3 && props.data.tip != ''){
+        data.score.tips.push(props.data.tip);
       }
     }
     // console.log("end", data.score);
