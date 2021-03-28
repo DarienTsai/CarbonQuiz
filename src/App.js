@@ -8,7 +8,7 @@ import { useState } from 'react';
 
 // rendered for testing atm
 function App() {
-  const [page, setPage] = useState(0);
+  const [, setPage] = useState(0);
   const [question, setQuestion] = useState(0);
 
   return (

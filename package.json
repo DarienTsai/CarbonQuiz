@@ -14,16 +14,17 @@
     "npm": "^7.7.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-dotenv": "^0.1.3",
     "react-firebaseui": "^4.1.0",
     "react-scripts": "4.0.3",
     "sass": "^1.32.8",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-dotenv && react-scripts start",
     "dev": "concurrently \"npm start\" \"sass --watch src/sass/compile.scss src/App.css\"",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "build": "react-dotenv && react-scripts build",
+    "test": "react-dotenv && react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "bash deploy.sh"
   },

@@ -5,10 +5,12 @@ export default function ScoreMetric(props) {
     category = 'Transport',
     score = 12,
     maxPoints = 15,
+    average = 1,
+    percent = 1,
   } = props;
 
-  const percent = score / maxPoints;
-  const progress = percent * 100;
+  const progress = 100 - (percent * 100);
+  const betterVal = Math.round(progress - (average * 100));
 
   return (
     <div className='metric-container'>
@@ -22,15 +24,30 @@ export default function ScoreMetric(props) {
             width: `${progress}%`
           }}
         />
-        <div>
-          - Better than [NEED FIREBASE] of other results
-        </div>
+        {
+          betterVal > 0 &&
+          <div>
+            - You scored better than {Math.round(betterVal)}% of other results
+          </div>
+        }
+        {
+          betterVal < 0 &&
+          <div>
+            - You scored lower than {Math.round(Math.abs(betterVal))}% of other results
+          </div>
+        }
+        {
+          betterVal === 0 &&
+          <div>
+            - You scored average
+          </div>
+        }
       </div>
       <p className='x-spacing main-metric-text'>
         {maxPoints - score}/{maxPoints}
       </p>
       <p className='x-spacing main-metric-text'>
-        {100 - Math.round(progress)}%
+        {Math.round(progress)}%
       </p>
     </div>
   )

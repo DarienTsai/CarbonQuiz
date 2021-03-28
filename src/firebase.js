@@ -1,5 +1,6 @@
 import firebase from 'firebase';
-require('dotenv').config()
+const path = require('path')
+const dotenv = require('dotenv').config();
 
 // Configure Firebase.
 const config = {
@@ -26,19 +27,24 @@ function pushScore(scores){
         })
 }
 
-function getAllScore(){
-    DB.ref("allScore").once("value")
+async function getAllScore(){
+    let val = 0;
+    await DB.ref("allScore").once("value")
         .catch(console.error)
-        .then(snapshot => {
+        .then(async snapshot => {
+            val = snapshot.val();
             return snapshot.val();
         })
+    console.log('done');
+    return val;
 }
 
-function getAvg(){
-    DB.ref("allScore").once("value")
+async function getAvg(){
+    let val = 0;
+    await DB.ref("allScore").once("value")
         .catch(console.error)
-        .then(snapshot => {
-            let allScore = snapshot.val();
+        .then(async snapshot => {
+            let allScore = await snapshot.val();
             let avgScore = {
                 fuel: 0,
                 home: 0,
@@ -46,15 +52,23 @@ function getAvg(){
                 waste: 0,
                 total: 0
             }
+            if (!allScore) {
+                val = avgScore;
+                return avgScore;
+            }
             for(let i = 0; i < allScore.length; i++){
                 avgScore["fuel"] += allScore[i]["fuel"]/allScore.length;
                 avgScore["home"] += allScore[i]["home"]/allScore.length;
                 avgScore["food"] += allScore[i]["food"]/allScore.length;
                 avgScore["waste"] += allScore[i]["waste"]/allScore.length;
-                avgScore["total"] += (allScore[i]["fuel"] + allScore[i]["home"] + allScore[i]["food"] + allScore[i]["waste"])/allScore.length;
             }
+            avgScore["total"] += (avgScore["fuel"] + avgScore["home"] + 
+                avgScore["food"] + avgScore["waste"]) / 4;
+            console.log(avgScore);
+            val = avgScore;
             return avgScore;
         })
+    return val;
 }
 
 let firebaseApp = {
