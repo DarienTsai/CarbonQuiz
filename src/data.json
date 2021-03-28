@@ -86,7 +86,7 @@
         {
             "category": "Food",
             "text": "You arrive at the store and get your weekly groceries. As you line up for checkout, you check out today’s haul of...",
-            "radio": true,
+            "radio": false,
             "choices":[
                 {"text": "Meats", "impact": 3},
                 {"text": "Fruits and Veggies", "impact": 1},
@@ -201,7 +201,7 @@
         {
             "category": "Home",
             "text": "You wake up in the morning in your...",
-            "radio": false,
+            "radio": true,
             "choices":[
                 {"text": "Mansion", "impact": 5},
                 {"text": "Apartment", "impact": 1},
