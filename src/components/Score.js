@@ -19,10 +19,10 @@ export default function Score(props) {
         </div>
         <div className='score-body'>
           <p className='score-space main-score'>
-            {aggregateSum}/{aggregateTotal}
+            {aggregateTotal - aggregateSum}/{aggregateTotal}
           </p>
           <p className='score-space percent-score'>
-            {(100 * (aggregateSum/aggregateTotal)).toFixed(2) + '%'}
+            {(100 - (100 * (aggregateSum/aggregateTotal))).toFixed(2)}%
           </p>
           <p className='score-space para-score'>
             That's better than [NEED FIREBASE] of other results!
