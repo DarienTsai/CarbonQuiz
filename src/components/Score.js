@@ -53,13 +53,13 @@ export default function Score(props) {
           {
           betterVal > 0 &&
           <p className='score-space para-score'>
-            You scored better than {Math.round(betterVal)}% of other results!
+            You scored better than {Math.round(betterVal)}% compared to the average!
           </p>
         }
         {
           betterVal < 0 &&
           <p className='score-space para-score'>
-            You scored lower than {Math.round(Math.abs(betterVal))}% of other results
+            You scored less than {Math.round(Math.abs(betterVal))}% compared to the average
           </p>
         }
         {

@@ -27,13 +27,13 @@ export default function ScoreMetric(props) {
         {
           betterVal > 0 &&
           <div>
-            - You scored better than {Math.round(betterVal)}% of other results
+            - You scored better than {Math.round(betterVal)}% compared to the average
           </div>
         }
         {
           betterVal < 0 &&
           <div>
-            - You scored lower than {Math.round(Math.abs(betterVal))}% of other results
+            - You scored less than {Math.round(Math.abs(betterVal))}% compared to the average
           </div>
         }
         {
