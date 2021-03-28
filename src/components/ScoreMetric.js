@@ -27,10 +27,10 @@ export default function ScoreMetric(props) {
         </div>
       </div>
       <p className='x-spacing main-metric-text'>
-        {score}/{maxPoints}
+        {maxPoints - score}/{maxPoints}
       </p>
       <p className='x-spacing main-metric-text'>
-        {Math.round(progress)}%
+        {100 - Math.round(progress)}%
       </p>
     </div>
   )
