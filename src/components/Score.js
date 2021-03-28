@@ -1,7 +1,9 @@
 import React from 'react';
 import ScoreMetric from './ScoreMetric';
 
-export default function Score() { 
+export default function Score(props) { 
+
+
   return (
     <div className='score-main-container'>
       <div className='score-statistics'>

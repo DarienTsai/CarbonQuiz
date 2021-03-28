@@ -12,7 +12,7 @@
 
 .play-button {
   font-size: 2.5rem;
-  width: 10vw;
+  width: 12rem;
 }
 .play-button:hover {
   background-color: #e4e4e4;
@@ -37,7 +37,7 @@
   height: 3rem;
   font-size: 1.3rem;
   position: absolute;
-  left: 40vw;
+  text-align: center;
   bottom: 1vh;
 }
 
@@ -131,9 +131,14 @@
   margin: 20px 0;
 }
 
+#question {
+  background-color: #87f587;
+}
+
 * {
   margin: 0;
   padding: 0;
+  outline: 1px solid yellow;
 }
 
 body #root {

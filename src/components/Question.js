@@ -8,7 +8,6 @@ import CheckQ from './CheckQ';
 import Button from '@material-ui/core/Button';
 
 export default function Question(props) {
-
   // create initial q state
   let init = props.data.radio ? "0" : {};
 
@@ -26,7 +25,6 @@ export default function Question(props) {
 
   // Question submission
   const handleNext = () => {
-
     // console.log("start", data.score);
 
     // Add choice impact to sum
@@ -51,7 +49,7 @@ export default function Question(props) {
         if (res[key]){
           for(let i = 0; i < props.data.choices.length; i++){
 
-            if( props.data.choices[i].text == key ){
+            if( props.data.choices[i].text === key ){
               data.score[props.data.category].sum += props.data.choices[i].impact;
             }
           }
@@ -60,20 +58,36 @@ export default function Question(props) {
     }
     // console.log("end", data.score);
 
-
     // Transition to next Q here
-
+    // console.log(props.question + 1);
+    // console.log(data.story.length);
+    if (props.question + 1 < data.story.length) {
+      props.setQuestion(props.question + 1);
+    } else {
+      data.nav = 2;
+      props.setPage(2);
+    }
   }
 
   // Map choices to their idx, used to access score on q submit
   return (
     <div id="question">
       {/* icon */}
-      <p className="question-text">{props.data.text}</p>
+      <p className="question-text">
+        {props.data.text}
+      </p>
 
-      {props.data.radio ? <RadioQ val={res} handle={handleChange} data={props.data}/>:<CheckQ val={res} handle={handleChange} data={props.data}/>}
+      {
+        props.data.radio 
+        ? 
+        <RadioQ val={res} handle={handleChange} data={props.data}/>
+        :
+        <CheckQ val={res} handle={handleChange} data={props.data}/>
+      }
 
-      <Button onClick={handleNext} variant="contained" color="primary">{">>"}</Button>
+      <Button onClick={handleNext} variant="contained" color="primary">
+        {">>"}
+      </Button>
       
     </div>
   )
