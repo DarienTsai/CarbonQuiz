@@ -34,7 +34,7 @@ export default function Score(props) {
           Reduction of Carbon Footprint
         </p>
         {
-          data.score.Fuel.total != 0 &&
+          data.score.Fuel.total !== 0 &&
           <ScoreMetric 
             category='Fuel'
             score={data.score.Fuel.sum}
@@ -42,7 +42,7 @@ export default function Score(props) {
           />
         }
         {
-          data.score.Home.total != 0 &&
+          data.score.Home.total !== 0 &&
           <ScoreMetric 
             category='Home'
             score={data.score.Home.sum}
@@ -50,7 +50,7 @@ export default function Score(props) {
           />
         }
         {
-          data.score.Food.total != 0 &&
+          data.score.Food.total !== 0 &&
           <ScoreMetric 
             category='Food'
             score={data.score.Food.sum}
@@ -58,7 +58,7 @@ export default function Score(props) {
           />
         }
         {
-          data.score.Waste.total != 0 &&
+          data.score.Waste.total !== 0 &&
           <ScoreMetric 
             category='Waste'
             score={data.score.Waste.sum}

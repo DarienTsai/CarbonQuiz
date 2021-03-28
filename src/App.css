@@ -142,7 +142,7 @@
 .outer-question-container {
   display: flex;
   justify-content: center;
-  background-size: 100vw 100vh;
+  background-position: center center;
   background-repeat: no-repeat;
   height: 100vh;
   width: 100vw;

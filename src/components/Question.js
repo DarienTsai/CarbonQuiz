@@ -10,11 +10,9 @@ import bg_evening from '../assets/bg-evening.png';
 import bg_morning from '../assets/bg-morning.png';
 
 import Button from '@material-ui/core/Button';
-import createPalette from '@material-ui/core/styles/createPalette';
 
 export default function Question(props) {
   const [main_bg, setMainBg] = useState(bg_morning);
-  const [refresh, setRefresh] = useState(0);
 
   // create initial q state
   let init = props.data.radio ? "0" : {};
@@ -33,7 +31,7 @@ export default function Question(props) {
     } else {
       setMainBg(bg_evening);
     }
-  }, [refresh])
+  }, [props.question, props.data])
   
 
 
@@ -86,7 +84,6 @@ export default function Question(props) {
     // console.log(data.story.length);
     if (props.question + 1 < data.story.length) {
       props.setQuestion(props.question + 1);
-      setRefresh(prev => !prev);
     } else {
       data.nav = 2;
       props.setPage(2);
