@@ -17,10 +17,10 @@ function pushScore(scores){
     DB.ref("allScore").once("value")
         .catch(console.error)
         .then(snapshot => {
-            console.log(scores);
+            // console.log(scores);
             let allScore = [];
             if(snapshot.val()) allScore = snapshot.val();
-            console.log(allScore);
+            // console.log(allScore);
             allScore.push(scores);
             DB.ref("allScore").set(allScore)
                 .catch(console.error)
@@ -35,7 +35,7 @@ async function getAllScore(){
             val = snapshot.val();
             return snapshot.val();
         })
-    console.log('done');
+    // console.log('done');
     return val;
 }
 
@@ -64,7 +64,7 @@ async function getAvg(){
             }
             avgScore["total"] += (avgScore["fuel"] + avgScore["home"] + 
                 avgScore["food"] + avgScore["waste"]) / 4;
-            console.log(avgScore);
+            // console.log(avgScore);
             val = avgScore;
             return avgScore;
         })

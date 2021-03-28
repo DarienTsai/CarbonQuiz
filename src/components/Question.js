@@ -24,7 +24,7 @@ export default function Question(props) {
     // console.log(props.data);
     // console.log(props.question)
     const modulo = props.question % 3;
-    if (props.question === 0 || modulo === 1) {
+    if ((props.question === 0 || modulo === 1) && props.question !== data.story.length - 1) {
       setMainBg(bg_morning);
     } else if (modulo === 2) {
       setMainBg(bg_noon);

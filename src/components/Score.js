@@ -22,7 +22,7 @@ export default function Score(props) {
       food: foodPayload,
       waste: wastePayload,
     };
-    firebaseApp.pushScore(payload)
+    firebaseApp.pushScore(payload);
   }, []);
 
   const printAvg = async () => {
