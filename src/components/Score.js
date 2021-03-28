@@ -3,7 +3,7 @@ import React from 'react';
 import ScoreMetric from './ScoreMetric';
 import firebaseApp from '../firebase';
 
-export default function Score(props) { 
+export default async function Score(props) { 
 
   console.log(data);
 
@@ -11,6 +11,10 @@ export default function Score(props) {
     data.score.Food.sum + data.score.Waste.sum;
   const aggregateTotal = data.score.Fuel.total + data.score.Home.total +
     data.score.Food.total + data.score.Waste.total;
+
+  const call = await firebaseApp.getAvg();
+
+  console.log(call);
 
   return (
     <div className='score-main-container'>
@@ -26,7 +30,7 @@ export default function Score(props) {
             {(100 - (100 * (aggregateSum/aggregateTotal))).toFixed(2)}%
           </p>
           <p className='score-space para-score'>
-            That's better than [NEED FIREBASE] of other results!
+            That's better than {} of other results!
           </p>
         </div>
       </div>

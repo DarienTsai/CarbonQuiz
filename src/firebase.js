@@ -1,5 +1,6 @@
 import firebase from 'firebase';
-require('dotenv').config()
+const path = require('path')
+const dotenv = require('dotenv').config();
 
 // Configure Firebase.
 const config = {
@@ -45,6 +46,9 @@ function getAvg(){
                 food: 0,
                 waste: 0,
                 total: 0
+            }
+            if (!allScore) {
+                return avgScore;
             }
             for(let i = 0; i < allScore.length; i++){
                 avgScore["fuel"] += allScore[i]["fuel"]/allScore.length;
