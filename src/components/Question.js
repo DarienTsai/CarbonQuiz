@@ -21,8 +21,8 @@ export default function Question(props) {
   const [res, setRes] = useState(init);
 
   useEffect(() => {
-    console.log(props.data);
-    console.log(props.question)
+    // console.log(props.data);
+    // console.log(props.question)
     const modulo = props.question % 3;
     if (props.question === 0 || modulo === 1) {
       setMainBg(bg_morning);
@@ -59,7 +59,7 @@ export default function Question(props) {
       data.score[props.data.category].total += max;
 
       data.score[props.data.category].sum += props.data.choices[res].impact;
-      if(props.data.choices[res].impact > 3 && props.data.tip !== ''){
+      if(props.data.choices[res].impact >= 3 && props.data.tip !== ''){
         data.score.tips.push(props.data.tip);
       }
     } else{
@@ -82,7 +82,7 @@ export default function Question(props) {
       }
       data.score[props.data.category].sum += sum;
 
-      if(sum > 3 && props.data.tip !== ''){
+      if(sum >= 3 && props.data.tip !== ''){
         data.score.tips.push(props.data.tip);
       }
     }

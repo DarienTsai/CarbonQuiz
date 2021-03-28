@@ -189,7 +189,7 @@ window.env = {
   "npm_package_description": "Carbon Quiz is a fun way to estimate the carbon emissions from your lifestyle.",
   "npm_package_eslintConfig_extends_0": "react-app",
   "npm_package_eslintConfig_extends_1": "react-app/jest",
-  "npm_package_gitHead": "24a06183d0f7ba78bbd9d4878254f140e96f5506",
+  "npm_package_gitHead": "eb4664a34f3abf99b99765d92db5905ae802099b",
   "npm_package_json": "C:\\Users\\ricke\\Documents\\coding\\repos\\CarbonQuiz\\package.json",
   "npm_package_name": "temp",
   "npm_package_private": "true",
