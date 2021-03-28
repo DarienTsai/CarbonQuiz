@@ -134,11 +134,16 @@
 #question {
   display: inline-block;
   background-color: rgba(40, 40, 40, 0.8);
+  position: absolute;
+  bottom: 3vh;
   z-index: 3;
 }
 
 .outer-question-container {
   display: flex;
+  justify-content: center;
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
   height: 100vh;
   width: 100vw;
 }
@@ -154,7 +159,6 @@
 * {
   margin: 0;
   padding: 0;
-  outline: 1px solid yellow;
 }
 
 body #root {

@@ -1,11 +1,17 @@
 #question {
   display: inline-block;
-  background-color: rgba(40,40,40,0.8);  
+  background-color: rgba(40,40,40,0.8);
+  position: absolute;
+  bottom: 3vh;
   z-index: 3;
 }
 
 .outer-question-container {
   display: flex;
+  justify-content: center;
+  // Probably need to change background size
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
   height: 100vh;
   width: 100vw;
 }
