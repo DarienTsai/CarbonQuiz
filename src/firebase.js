@@ -34,6 +34,29 @@ function getAllScore(){
         })
 }
 
+function getAvg(){
+    DB.ref("allScore").once("value")
+        .catch(console.error)
+        .then(snapshot => {
+            let allScore = snapshot.val();
+            let avgScore = {
+                fuel: 0,
+                home: 0,
+                food: 0,
+                waste: 0,
+                total: 0
+            }
+            for(let i = 0; i < allScore.length; i++){
+                avgScore["fuel"] += allScore[i]["fuel"]/allScore.length;
+                avgScore["home"] += allScore[i]["home"]/allScore.length;
+                avgScore["food"] += allScore[i]["food"]/allScore.length;
+                avgScore["waste"] += allScore[i]["waste"]/allScore.length;
+                avgScore["total"] += (allScore[i]["fuel"] + allScore[i]["home"] + allScore[i]["food"] + allScore[i]["waste"])/allScore.length;
+            }
+            return avgScore;
+        })
+}
+
 let firebaseApp = {
     pushScore: pushScore,
     getAllScore: getAllScore
