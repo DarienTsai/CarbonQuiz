@@ -21,8 +21,6 @@ export default function Question(props) {
   const [res, setRes] = useState(init);
 
   useEffect(() => {
-    // console.log(props.data);
-    // console.log(props.question)
     const modulo = props.question % 3;
     if ((props.question === 0 || modulo === 1) && props.question !== data.story.length - 1) {
       setMainBg(bg_morning);
@@ -46,8 +44,6 @@ export default function Question(props) {
 
   // Question submission
   const handleNext = () => {
-    // console.log("start", data.score);
-
     // Add choice impact to sum
     if(props.data.radio){
 
@@ -86,11 +82,8 @@ export default function Question(props) {
         data.score.tips.push(props.data.tip);
       }
     }
-    // console.log("end", data.score);
 
     // Transition to next Q here
-    // console.log(props.question + 1);
-    // console.log(data.story.length);
     if (props.question + 1 < data.story.length) {
       props.setQuestion(props.question + 1);
     } else {
